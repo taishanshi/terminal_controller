@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TerminalControler</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="login_title">LYGF</string>
+    <string name="login_system_name">HMI登录系统</string>
+    <string name="login_ip_text">TargetIP:</string>
+    <string name="login_port_text">Port:</string>
+    <string name="login_visualization_text">Visualization:</string>
+    <string name="login_ip_hint">请输入IP地址</string>
+    <string name="login_port_hint">请输入端口号</string>
+    <string name="login_visualization_hint">请输入可视化界面名称</string>
+    <string name="login_login_text">点击登录</string>
+
+    <string name="login_version">Version: %1$s</string>
+    <string name="login_copy_right">"@copyright: 华创工业控制系统（天津）有限公司"</string>
+    <string name="login_company_English">Huachuang Industrial Control System (Tian Jin) CO.Ltd</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

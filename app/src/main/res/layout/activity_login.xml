@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AAAAAA"
+    android:elevation="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/login_login_width"
+        android:layout_height="@dimen/login_login_height"
+        android:layout_marginTop="@dimen/login_login_margin_top"
+        android:layout_marginLeft="@dimen/login_login_margin_left"
+        android:gravity="center"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/login_stroke_width"
+        android:layout_height="@dimen/login_stroke_height"
+        android:background="@drawable/shape_login_edittext"
+        android:layout_marginTop="@dimen/login_stroke_margin_top"
+        android:elevation="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/login_system_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_system_name"
+            android:textSize="@dimen/login_system_name_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/login_system_name_margin_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/login_ip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_ip_text"
+            android:textSize="@dimen/login_des_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/login_textview_margin_right"
+            app:layout_constraintRight_toLeftOf="@+id/login_ip_edittext"
+            app:layout_constraintTop_toTopOf="@+id/login_ip_edittext"
+            app:layout_constraintBottom_toBottomOf="@+id/login_ip_edittext"/>
+
+        <EditText
+            android:id="@+id/login_ip_edittext"
+            android:layout_width="@dimen/login_edittext_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/login_edit_text_size"
+            android:layout_marginTop="@dimen/login_edittext_ip_margin_top"
+            android:layout_marginEnd="@dimen/login_edittext_margin_right"
+            android:singleLine="true"
+            android:inputType="text"
+            android:text="192.168.1.106"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_system_name"/>
+<!--        android:hint="@string/login_ip_hint"-->
+        <TextView
+            android:id="@+id/login_port_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_port_text"
+            android:textSize="@dimen/login_des_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/login_textview_margin_right"
+            app:layout_constraintRight_toLeftOf="@+id/login_port_edittext"
+            app:layout_constraintTop_toTopOf="@+id/login_port_edittext"
+            app:layout_constraintBottom_toBottomOf="@+id/login_port_edittext"/>
+
+        <EditText
+            android:id="@+id/login_port_edittext"
+            android:layout_width="@dimen/login_edittext_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/login_edit_text_size"
+            android:singleLine="true"
+            android:inputType="number"
+            android:text="8080"
+            android:hint="@string/login_port_hint"
+            android:layout_marginEnd="@dimen/login_edittext_margin_right"
+            android:layout_marginTop="@dimen/login_edittext_margin_top"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_ip_edittext"/>
+
+        <TextView
+            android:id="@+id/login_visualization_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_visualization_text"
+            android:textSize="@dimen/login_des_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/login_textview_margin_right"
+            app:layout_constraintRight_toLeftOf="@+id/login_visualization_edittext"
+            app:layout_constraintTop_toTopOf="@+id/login_visualization_edittext"
+            app:layout_constraintBottom_toBottomOf="@+id/login_visualization_edittext"/>
+
+        <EditText
+            android:id="@+id/login_visualization_edittext"
+            android:layout_width="@dimen/login_edittext_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/login_edit_text_size"
+            android:singleLine="true"
+            android:inputType="text"
+            android:text="webvisu"
+            android:hint="@string/login_visualization_hint"
+            android:layout_marginEnd="@dimen/login_edittext_margin_right"
+            android:layout_marginTop="@dimen/login_edittext_margin_top"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_port_edittext"/>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="@dimen/login_btn_width"
+            android:layout_height="@dimen/login_btn_height"
+            android:layout_marginTop="@dimen/login_btn_margin_top"
+            android:text="@string/login_login_text"
+            android:textSize="@dimen/login_btn_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_visualization_edittext"/>
+
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/login_version_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/company_copyright"/>
+
+        <TextView
+            android:id="@+id/company_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_copy_right"
+            android:textSize="@dimen/login_version_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/company_name_en"/>
+
+        <TextView
+            android:id="@+id/company_name_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_company_English"
+            android:textSize="@dimen/login_version_text_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/login_company_copyright_info_margin_Bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
