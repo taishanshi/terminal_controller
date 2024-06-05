@@ -6,15 +6,16 @@ import android.text.TextUtils
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.wyx.common_module.sharedPreference.CommonPreferences
+import com.wyx.controler.manager.YsController
 import com.wyx.terminalcontroller.databinding.ActivityLoginBinding
 
 class LauncherActivity : AppCompatActivity() {
     private val TAG: String = LauncherActivity::class.simpleName!!
-    private lateinit var binding: ActivityLoginBinding
     private lateinit var loginSp: CommonPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //全屏
+        YsController.fullScreen()
         Log.d(TAG,"LauncherActivity onCreate")
         loginSp = CommonPreferences(this)
     }

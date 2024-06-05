@@ -92,12 +92,12 @@ class WebActivity : AppCompatActivity() {
 
 
 //        Thread.sleep(3000)
-        if(retryTimes >= 3) {
+        if(retryTimes >= 5) {
             loginSp.loginUrl = ""
             finish()
         } else {
             Toast.makeText(this@WebActivity, "网页错误：${error}, 开始重试： ${retryTimes + 1}", Toast.LENGTH_SHORT).show()
-            Thread.sleep(2000)
+            Thread.sleep(4000)
 
             retryTimes++
             binding.loading.visibility = View.VISIBLE

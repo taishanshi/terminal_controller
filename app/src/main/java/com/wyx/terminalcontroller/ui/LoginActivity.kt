@@ -32,17 +32,32 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initView()
-        YsController.fullScreen()
 
         loginSp = CommonPreferences(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        loginSp.lastLoginIP.takeIf {
+            !TextUtils.isEmpty(it)
+        }.run {
+            binding.loginIpEdittext.setText(loginSp.lastLoginIP)
+            binding.loginPortEdittext.setText(loginSp.lastLoginPort)
+            binding.loginVisualizationEdittext.setText(loginSp.lastLoginVisualization)
+        }
     }
 
     private fun initView() {
         binding.appVersion.text = resources.getString(R.string.login_version, getAppVersion(this@LoginActivity))
         binding.loginBtn.setOnClickListener {
-            var visualization = binding.loginVisualizationEdittext.text
-            var host = binding.loginIpEdittext.text
-            var port = binding.loginPortEdittext.text
+            var visualization = binding.loginVisualizationEdittext.text.toString()
+            var host = binding.loginIpEdittext.text.toString()
+            var port = binding.loginPortEdittext.text.toString()
+
+            loginSp.lastLoginIP = host
+            loginSp.lastLoginPort = port
+            loginSp.lastLoginVisualization = visualization
 
             if(TextUtils.isEmpty(host) || TextUtils.isEmpty(port) || TextUtils.isEmpty(visualization) ) {
                 Toast.makeText(this@LoginActivity, "不能为空", Toast.LENGTH_SHORT).show()

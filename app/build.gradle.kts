@@ -13,8 +13,8 @@ android {
         applicationId = "com.wyx.terminalcontroller"
         minSdk = 26
         targetSdk = 34
-        versionCode = 100000003
-        versionName = "1.0.3"
+        versionCode = 100000004
+        versionName = "1.0.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
