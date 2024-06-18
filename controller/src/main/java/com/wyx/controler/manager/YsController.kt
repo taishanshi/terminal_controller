@@ -35,6 +35,7 @@ object YsController: ControllerInterface {
         hideNavBar(true)
         hideStatusBar(false)
         setSlideShowNavBar(false)
+        setSlidShowNotificationBar(false)
 
         val launcer = "com.wyx.terminalcontroler/com.wyx.terminalcontroler.ui.LauncherActivity"
         setDefaultLauncher(launcer)
@@ -45,6 +46,7 @@ object YsController: ControllerInterface {
         hideNavBar(false)
         hideStatusBar(true)
         setSlideShowNavBar(true)
+        setSlidShowNotificationBar(true)
 
 
         val launcer = " com.android.theme/com.android.theme.icon_pack.rounded.launcher"
